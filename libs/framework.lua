@@ -1,4 +1,4 @@
-local mupen = require("mupen")
+local mupen = require("libs.mupen")
 
 local framework = {}
 

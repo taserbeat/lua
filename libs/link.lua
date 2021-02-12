@@ -1,6 +1,6 @@
 -- 依存モジュール
-local mhs = require("mhs")
-local mupen = require("mupen")
+local mhs = require("libs.mhs")
+local mupen = require("libs.mupen")
 
 local link = {}
 

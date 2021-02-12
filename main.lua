@@ -1,6 +1,6 @@
-local framework = require("framework")
-local mupen = require("mupen")
-local link = require("link")
+local framework = require("libs.framework")
+local mupen = require("libs.mupen")
+local link = require("libs.link")
 
 ---------- 1. 初期化処理を定義するならばコメントアウトを解除して実装する ----------
 
