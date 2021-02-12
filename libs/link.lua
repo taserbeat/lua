@@ -4,6 +4,8 @@ local mupen = require("libs.mupen")
 
 local link = {}
 
+----- パラメータ取得関連 -----
+
 -- 最大体力
 link.getMaxHp = function()
     -- integer
@@ -62,6 +64,29 @@ end
 link.getHoverTimer = function()
     -- integer
     return mupen.readdword_as_mhs(mhs.address.HoverTimer)
+end
+
+----- チート関連 -----
+
+link.moonJump = function()
+    local z = link.getZ()
+    mupen.writefloat_as_mhs(mhs.address.Z, z + 13)
+    return
+end
+
+link.highSpeed = function()
+    -- 
+    mupen.writefloat_as_mhs(mhs.address.Speed, 35)
+end
+
+link.healHP = function()
+    -- 
+    mupen.writedword_as_mhs(mhs.address.HP, link.getMaxHp())
+end
+
+link.dyingHp = function()
+    -- 
+    mupen.writedword_as_mhs(mhs.address.HP, 4)
 end
 
 --

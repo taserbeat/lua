@@ -1,4 +1,5 @@
 local mupen = require("libs.mupen")
+local cheat = require("libs.cheat")
 
 local framework = {}
 
@@ -6,6 +7,7 @@ function OnInitializeDefault()
     -- 初期化処理
     local windowInfo = mupen.getInitialWindowInfo()
     wgui.resize(windowInfo.width * 1.2, windowInfo.height)
+    joypad.register(cheat.listener)
     print("Script is initialized!")
 end
 

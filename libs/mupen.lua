@@ -27,6 +27,16 @@ mupen.readfloat_as_mhs = function(mhs_address)
     return memory.readfloat(mhs_address - mupen.address.rdram)
 end
 
+mupen.writedword_as_mhs = function(mhs_address, value)
+    memory.writedword(mhs_address - mupen.address.rdram, value)
+    return
+end
+
+mupen.writefloat_as_mhs = function(mhs_address, value)
+    memory.writefloat(mhs_address - mupen.address.rdram, value)
+    return
+end
+
 -- 描画関連 --
 
 mupen.drawText = function(width, height, text)
