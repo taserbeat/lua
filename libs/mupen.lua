@@ -19,6 +19,17 @@ mupen.address = {
 
 -- メモリ関連 --
 
+mupen.readbyte_as_mhs = function(mhs_address)
+    local xoredAddress = XOR(mhs_address, 3)
+    return memory.readbyte(xoredAddress - mupen.address.rdram)
+end
+
+-- mupen.readword_as_mhs = function(mhs_address)
+-- TODO: 動作が確認できたらコメントアウトを解除する
+--     local xoredAddress = XOR(mhs_address, 0x2)
+--     return memory.readdword(xoredAddress - mupen.address.rdram)
+-- end
+
 mupen.readdword_as_mhs = function(mhs_address)
     return memory.readdword(mhs_address - mupen.address.rdram)
 end
@@ -26,6 +37,17 @@ end
 mupen.readfloat_as_mhs = function(mhs_address)
     return memory.readfloat(mhs_address - mupen.address.rdram)
 end
+
+mupen.writebyte_as_mhs = function(mhs_address, value)
+    local xored_address = XOR(mhs_address, 3)
+    memory.writebyte(xored_address - mupen.address.rdram, value)
+end
+
+-- mupen.writeword_as_mhs = function(mhs_address, value)
+-- TODO: 動作が確認できたらコメントアウトを解除する
+--     local xoredAddress = XOR(mhs_address, 0x2)
+--     return memory.writeword(xoredAddress - mupen.address.rdram, value)
+-- end
 
 mupen.writedword_as_mhs = function(mhs_address, value)
     memory.writedword(mhs_address - mupen.address.rdram, value)
