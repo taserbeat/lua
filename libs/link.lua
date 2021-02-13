@@ -6,6 +6,11 @@ local link = {}
 
 ----- パラメータ取得関連 -----
 
+link.getExitId = function()
+    -- integer
+    return mupen.readdword_as_mhs(mhs.address.ExitId)
+end
+
 -- 最大体力
 link.getMaxHp = function()
     -- integer
@@ -67,6 +72,10 @@ link.getHoverTimer = function()
 end
 
 ----- チート関連 -----
+
+link.setExitId = function(value)
+    mupen.writedword_as_mhs(mhs.address.ExitId, value)
+end
 
 link.moonJump = function()
     local z = link.getZ()
