@@ -15,6 +15,7 @@ function OnStopDefault()
     -- Luaスクリプトのデフォルト終了処理
     local windowInfo = mupen.getInitialWindowInfo()
     wgui.resize(windowInfo.width, windowInfo.height)
+    emu.speed(100)
     print("Script is stopped!")
 end
 
