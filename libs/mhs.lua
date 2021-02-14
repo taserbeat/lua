@@ -58,7 +58,9 @@ mhs.address = {
     Speed = 0x00A64A78,
     isISG = 0x00A64A80,
     HoverTimer = 0x00A64AD0,
-    ShadowCSTimer = 0x00A7ED80
+    SpiritWarpTimer = 0x00A6C090,
+    DekuWarpTimer = 0x00A792B0,
+    ShadowWarpTimer = 0x00A7ED80
 }
 
 return mhs
