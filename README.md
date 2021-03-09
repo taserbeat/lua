@@ -6,6 +6,12 @@ mupen64_lua の自分用スクリプト
 
 mupen の exe と同じ階層にこの`lua`フォルダが存在するように clone する。
 
+# Lua API
+
+以下のリポジトリのソースに Lua の API に対する処理が実装されている。
+
+https://github.com/mkdasher/mupen64-rr-lua-/blob/master/lua/LuaConsole.cpp
+
 # 参考
 
 https://github.com/TASVideos/mupen64-rr/blob/wiki/EmuLua.md
