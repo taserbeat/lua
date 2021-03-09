@@ -1,7 +1,11 @@
+--
+-- Ocarina of Time JP Ver1.2
+-- Mupen Lua
+--
 local mhs = {}
 
 mhs.address = {
-    ExitId = 0x009A3BE0,
+    EntranceId = 0x009A3BE0,
     MaxHp = 0x009A3C0C,
     Magic = 0x009A3C10,
     HP = 0x009A3C12,
