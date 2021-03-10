@@ -98,6 +98,12 @@ link.dyingHp = function()
     mupen.writedword_as_mhs(mhs.address.HP, 4)
 end
 
+link.outOfBounds = function()
+    -- 
+    mupen.writedword_as_mhs(mhs.address.HP, 48)
+    mupen.writefloat_as_mhs(mhs.address.NonSolidGround, -2000)
+end
+
 --
 -- 
 return link

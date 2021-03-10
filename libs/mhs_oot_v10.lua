@@ -49,6 +49,7 @@ mhs.address = {
     MagicBeans = 0x009A35C9,
     Skulltula = 0x009A3602,
     Language = 0x009A493A,
+    NonSolidGround = 0x00A6399C,
     X = 0x00A639BC,
     Y = 0x00A639B4,
     Z = 0x00A639B8,

@@ -22,11 +22,17 @@ function OnJoyPadRightDefault()
     link.dyingHp()
 end
 
+function OnLButtonPushedDefault()
+    -- Lボタンが押されたときのデフォルトのコールバック
+    link.outOfBounds()
+end
+
 cheat.handler = {
     OnJoyPadUp = OnJoyPadUpDefault,
     OnJoyPadDown = OnJoyPadDownDefault,
     OnJoyPadLeft = OnJoyPadLeftDefault,
-    OnJoyPadRight = OnJoyPadRightDefault
+    OnJoyPadRight = OnJoyPadRightDefault,
+    OnLButtonPushed = OnLButtonPushedDefault
 }
 
 cheat.setOnJoypadUp = function(callback)
@@ -49,12 +55,18 @@ cheat.setOnJoypadRight = function(callback)
     cheat.handler.OnJoyPadRight = callback
 end
 
+cheat.setOnLButtonPushed = function(callback)
+    -- Lボタンが押されたときのコールバックをセット
+    cheat.handler.OnLButtonPushed = callback
+end
+
 cheat.listener = function()
     local joy = joypad.get()
     if joy.up then cheat.handler.OnJoyPadUp() end
     if joy.down then cheat.handler.OnJoyPadDown() end
     if joy.left then cheat.handler.OnJoyPadLeft() end
     if joy.right then cheat.handler.OnJoyPadRight() end
+    if joy.L then cheat.handler.OnLButtonPushed() end
 end
 
 return cheat
