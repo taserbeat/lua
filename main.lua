@@ -23,7 +23,7 @@ local link = require("libs.link")
 local initialWindowInfo = mupen.getInitialWindowInfo()
 function OnUpdate()
     -- 
-    local speed_text = string.format("spped: %d", link.getSpeed())
+    local speed_text = string.format("spped: %.1f", link.getSpeed())
     mupen.drawText(initialWindowInfo.width, 0, speed_text)
 
     local x_text = string.format("X: %f", link.getX())

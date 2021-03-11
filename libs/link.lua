@@ -1,5 +1,5 @@
 -- 依存モジュール
-local mhs = require("libs.mhs_oot_v10")
+local mhs = require("libs.mhs_mupen_oot_v10")
 local mupen = require("libs.mupen")
 
 local link = {}
@@ -20,7 +20,7 @@ end
 -- 魔力
 link.getMagic = function()
     -- integer
-    return mupen.readdword_as_mhs(mhs.address.Magic)
+    return mupen.readdword_as_mhs(mhs.address.MP)
 end
 
 -- 体力
