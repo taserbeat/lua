@@ -58,8 +58,8 @@ framework.setOnUpdate = function(callback)
     -- 更新処理用のコールバックをセット
     framework.emulatorCallbacks.OnUpdate =
         function()
-            -- Note: ClearExtendedScreenを実行することで謎の白い焼付けが直ったので、コメントアウトのまま残す
-            -- ClearExtendedScreen()
+            -- Note: ClearExtendedScreenを実行することで謎の白い焼付けが直る
+            ClearExtendedScreen()
 
             callback()
 
