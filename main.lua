@@ -34,6 +34,9 @@ function OnUpdate()
 
     local z_text = string.format("Z: %f", link.getZ())
     mupen.drawText(initialWindowInfo.width, 75, z_text)
+
+    local angle_text = string.format("Angle: %x", link.getAngle())
+    mupen.drawText(initialWindowInfo.width, 100, angle_text)
 end
 
 framework.setOnUpdate(OnUpdate)

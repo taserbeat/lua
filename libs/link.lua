@@ -53,6 +53,15 @@ link.getZ = function()
     return mupen.readfloat_as_mhs(mhs.address.Z)
 end
 
+link.getAngle = function()
+    -- float
+    -- 南: 0,東: 16384, 北: 32768, 西: 49152
+    -- 角度1°あたり182.044...
+    local angleOrigin = mupen.readdword_as_mhs(mhs.address.Angle)
+    -- local angle = angleOrigin / 182.044
+    return angleOrigin
+end
+
 -- 残像剣状態
 link.getIsISG = function()
     -- boolean
