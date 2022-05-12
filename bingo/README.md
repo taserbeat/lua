@@ -10,7 +10,11 @@
 
 # 索引
 
-[RBA](./README.md#RBA)
+- [RBA](./README.md#rba)
+
+- [アイテムアップグレード](./README.md#アイテムアップグレード)
+
+- [BA](./README.md#ba)
 
 # RBA
 
