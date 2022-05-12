@@ -3,6 +3,8 @@ local cheat = require("libs.cheat")
 
 local framework = {}
 
+local initialWindowInfo = mupen.getInitialWindowInfo()
+
 function OnInitializeDefault()
     -- 初期化処理
     local windowInfo = mupen.getInitialWindowInfo()
@@ -26,7 +28,7 @@ end
 
 function OnUpdateWithFixFlip()
     -- Luaスクリプトの更新処理
-    mupen.fixFlick()
+    -- mupen.fixFlick()
 end
 
 framework.emulatorCallbacks = {
@@ -45,12 +47,24 @@ framework.setOnStop = function(callback)
     framework.emulatorCallbacks.OnStop = callback
 end
 
+function ClearExtendedScreen()
+    -- X方向正の向きにwgui.resize()で拡張された領域を黒く塗りつぶす
+    local windowInfo = wgui.info()
+    wgui.setbrush("black")
+    wgui.rect(initialWindowInfo.width, 0, windowInfo.width, windowInfo.height)
+end
+
 framework.setOnUpdate = function(callback)
     -- 更新処理用のコールバックをセット
     framework.emulatorCallbacks.OnUpdate =
         function()
+            -- Note: ClearExtendedScreenを実行することで謎の白い焼付けが直る
+            ClearExtendedScreen()
+
             callback()
-            OnUpdateWithFixFlip()
+
+            -- Note: (Mupen Ver1.0.6から?)画面のちらつきがなくなっていたのでコメントアウトにする
+            -- OnUpdateWithFixFlip()
         end
 end
 

@@ -1,6 +1,6 @@
 # LuaScript for OoT
 
-mupen64_lua の自分用スクリプト
+[mupen64(ver1.0.6)](https://github.com/mkdasher/mupen64-rr-lua-) の自分用スクリプト
 
 # メモ
 

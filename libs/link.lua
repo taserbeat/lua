@@ -1,5 +1,5 @@
 -- 依存モジュール
-local mhs = require("libs.mhs_oot_v10")
+local mhs = require("libs.mhs_mupen_oot_v10")
 local mupen = require("libs.mupen")
 
 local link = {}
@@ -20,7 +20,7 @@ end
 -- 魔力
 link.getMagic = function()
     -- integer
-    return mupen.readdword_as_mhs(mhs.address.Magic)
+    return mupen.readdword_as_mhs(mhs.address.MP)
 end
 
 -- 体力
@@ -51,6 +51,15 @@ end
 link.getZ = function()
     -- float
     return mupen.readfloat_as_mhs(mhs.address.Z)
+end
+
+link.getAngle = function()
+    -- float
+    -- 南: 0,東: 16384, 北: 32768, 西: 49152
+    -- 角度1°あたり182.044...
+    local angleOrigin = mupen.readdword_as_mhs(mhs.address.Angle)
+    -- local angle = angleOrigin / 182.044
+    return angleOrigin
 end
 
 -- 残像剣状態

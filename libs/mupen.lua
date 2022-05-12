@@ -61,6 +61,8 @@ end
 
 -- 描画関連 --
 
+local initialWindowInfo = wgui.info()
+
 mupen.drawText = function(width, height, text)
     -- 画面にテキストを描画する
 
@@ -79,6 +81,8 @@ mupen.drawText = function(width, height, text)
     wgui.text(width, height, text)
 end
 
+-- ウィンドウ関連
+
 mupen.fixFlick = function()
     -- drawTextを行った際の画面ちらつきを防ぐ
     wgui.setcolor("red")
@@ -86,9 +90,6 @@ mupen.fixFlick = function()
     wgui.setcolor("white")
     wgui.text(820, 580, " ")
 end
-
--- ウィンドウ関連
-local initialWindowInfo = wgui.info()
 
 mupen.getInitialWindowInfo = function()
     -- wgui.info
