@@ -12,7 +12,27 @@
 
 - [RBA](./README.md#rba)
 
+  - [クイックガイド](./README.md#クイックガイド)
+  - [ポケットタマゴ RBA](./README.md#ポケットタマゴ-rba)
+  - [てのりコッコ RBA](./README.md#てのりコッコ-rba)
+  - [コジロー RBA](./README.md#コジロー-rba)
+  - [あやしいキノコ RBA](./README.md#あやしいキノコ-rba)
+  - [あやしいクスリ RBA](./README.md#あやしいクスリ-rba)
+  - [密猟者のノコギリ RBA](./README.md#密猟者のノコギリ-rba)
+  - [折れたゴロン刀 RBA](./README.md#折れたゴロン刀-rba)
+  - [ダンジョンアイテム](./README.md#ダンジョンアイテム)
+  - [小さな鍵](./README.md#小さな鍵)
+
 - [アイテムアップグレード](./README.md#アイテムアップグレード)
+
+  - [デクのタネ袋](./README.md#デクのタネ袋)
+  - [爆弾袋](./README.md#爆弾袋)
+  - [グローブ](./README.md#グローブ)
+  - [ウロコ](./README.md#ウロコ)
+  - [サイフ](./README.md#サイフ)
+  - [デクの棒袋](./README.md#デクの棒袋)
+  - [デクの実袋](./README.md#デクの実袋)
+  - [矢立](./README.md#矢立)
 
 - [BA](./README.md#ba)
 
