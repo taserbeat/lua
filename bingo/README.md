@@ -8,6 +8,10 @@
 - [ZeldaTimeAttack Wiki - ReverseBottleAdventure](https://wikiwiki.jp/lozrta/ReverseBottleAdventure)
 - [ZeldaTimeAttack Wiki - BottleAdventure](https://wikiwiki.jp/lozrta/BottleAdventure)
 
+# 索引
+
+[RBA](./README.md#RBA)
+
 # RBA
 
 ## クイックガイド
